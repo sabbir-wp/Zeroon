@@ -1,0 +1,204 @@
+/** @Main scss for (Template/Project Name) @project     - Project Name @author      -  @created_by  - Ashiqur Rahman @created_at  -  @modified_by - */
+/* fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap");
+
+/* fonts import -END */
+/* reset, root */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  font-family: "Rubik", sans-serif !important;
+}
+
+:root {
+  /* Colors */
+  --color-primary-blue: #0070F3;   /* Main Blue */
+  --color-primary-yellow: #F9C513; /* Bright Yellow */
+  --color-dark-navy: #1F2536;      /* Dark Navy */
+  --color-gray: #707070;           /* Neutral Gray */
+  --color-light-blue: #C7E1FF;     /* Light Blue */
+  --color-extra-light-blue: #E8F4FF; /* Extra Light Blue */
+  --color-light-yellow: #FFF0C9;   /* Soft Yellow */
+
+  /* Typography */
+  --font-family-base: 'Inter', sans-serif;
+  --font-size-display: 48px;
+  --font-size-h1: 36px;
+  --font-size-h2: 30px;
+  --font-size-h3: 24px;
+  --font-size-h4: 20px;
+  --font-size-h5: 18px;
+  --font-size-h6: 16px;
+  --font-size-paragraph: 16px;
+
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Buttons */
+  --button-bg: var(--color-primary-blue);
+  --button-color: #ffffff;
+  --button-radius: 8px;
+  --button-padding: 0.75rem 1.5rem;
+}
+
+.hero-bg {
+  background-image: url("./assets/img/Zeroon.png");
+  background-size: cover;       /* make image cover full area */
+ 
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation Classes */
+.animate-on-scroll {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Staggered animations for children */
+.animate-on-scroll:nth-child(1) { animation-delay: 0.1s; }
+.animate-on-scroll:nth-child(2) { animation-delay: 0.2s; }
+.animate-on-scroll:nth-child(3) { animation-delay: 0.3s; }
+.animate-on-scroll:nth-child(4) { animation-delay: 0.4s; }
+
+/* Hover Effects */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+/* Button Hover Effects */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 112, 243, 0.2);
+}
+
+/* Card Hover Effects */
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Input Focus Effects */
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 3px rgba(0, 97, 255, 0.2);
+  border-color: var(--primary);
+}
+
+/* Navigation Menu Animation */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#mobile-menu:not(.hidden) {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Accordion Animation */
+.accordion-content {
+  max-height: 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.accordion-content:not(.hidden) {
+  opacity: 1;
+}
+
+.accordion-header i {
+  transition: transform 0.3s ease;
+}
+
+.accordion-header i.rotate-45 {
+  transform: rotate(45deg);
+}

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon.svg">
+
+  <!-- Theme Colors -->
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- SEO / Social Meta -->
+  <meta name="twitter:card" content="">
+  <meta name="twitter:site" content="@twitter_username">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="Zeroon">
+
+  <title>Zeroon SaaS - Web Application Guide Agency</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0070F3',
+            secondary: '#F9C513',
+            darkNavy: '#1F2536',
+            gray: '#707070',
+            lightBlue: '#C7E1FF',
+            extraLightBlue: '#E8F4FF',
+            lightYellow: '#FFF0C9',
+          },
+          fontFamily: {
+            sans: ['Rubik', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+  <!-- Header & Navigation -->
+  <header class="bg-gradient-to-r from-extraLightBlue to-white shadow-sm">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="flex items-center">
+          <img src="./assets/img/Zeroon.png" alt="Zeroon Logo" class="h-10">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-primary font-medium hover:text-darkNavy transition-colors duration-300">Home</a>
+          <a href="#" class="text-darkNavy font-medium hover:text-primary transition-colors duration-300">About</a>
+          <a href="#" class="text-darkNavy font-medium hover:text-primary transition-colors duration-300">Services</a>
+          <a href="#" class="text-darkNavy font-medium hover:text-primary transition-colors duration-300">Cases</a>
+          <a href="#" class="text-darkNavy font-medium hover:text-primary transition-colors duration-300">Blog</a>
+          <a href="#contact" class="text-darkNavy font-medium hover:text-primary transition-colors duration-300">Contact</a>
+          <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 shadow-md">Get Started</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="outline-none">
+            <svg class="w-6 h-6 text-darkNavy" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white absolute left-0 right-0 z-10 shadow-md mt-4 py-4 px-4 rounded-lg">
+        <div class="flex flex-col space-y-4">
+          <a href="#" class="text-primary font-medium hover:text-darkNavy transition-colors duration-300">Home</a>
+          <a href="#" class="text-darkNavy font-medium hover:text-primary transition-colors duration-300">About</a>
+          <a href="#" class="text-darkNavy font-medium hover:text-primary transition-colors duration-300">Services</a>
+          <a href="#" class="text-darkNavy font-medium hover:text-primary transition-colors duration-300">Cases</a>
+          <a href="#" class="text-darkNavy font-medium hover:text-primary transition-colors duration-300">Blog</a>
+          <a href="#contact" class="text-darkNavy font-medium hover:text-primary transition-colors duration-300">Contact</a>
+          <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 shadow-md text-center">Get Started</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-extraLightBlue to-white py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+          <h1 class="text-4xl md:text-5xl font-bold text-darkNavy mb-6 leading-tight">Web Application <span class="text-primary">Guide Agency</span></h1>
+          <p class="text-lg text-gray mb-8">We help businesses transform their ideas into powerful web applications with expert guidance and development support.</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition-colors duration-300 shadow-md text-center font-medium">Get Started</a>
+            <a href="#features" class="bg-white text-primary border border-primary px-8 py-3 rounded-lg hover:bg-extraLightBlue transition-colors duration-300 text-center font-medium">Learn More</a>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <img src="assets/img/Group 8660 (1).png" alt="Web Application Development" class="w-full h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section id="features" class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-darkNavy mb-4">We analyze & <span class="text-primary">monitoring your application</span></h2>
+        <p class="text-gray max-w-2xl mx-auto">Our team of experts provides comprehensive analysis and continuous monitoring to ensure your web applications perform at their best.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Feature Card 1 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 group hover:border-primary hover:-translate-y-2 transform transition-all duration-300">
+          <div class="bg-primary rounded-full w-14 h-14 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300 transform transition-transform duration-500 group-hover:scale-110">
+            <i class="fas fa-chart-line text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-darkNavy">Data Analysis</h3>
+          <p class="text-gray">We analyze your application data to identify patterns, trends, and opportunities for optimization.</p>
+        </div>
+        
+        <!-- Feature Card 2 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 group hover:border-primary hover:-translate-y-2 transform transition-all duration-300">
+          <div class="bg-primary rounded-full w-14 h-14 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300 transform transition-transform duration-500 group-hover:scale-110">
+            <i class="fas fa-shield-alt text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-darkNavy">Security Monitoring</h3>
+          <p class="text-gray">Continuous security monitoring to protect your application from threats and vulnerabilities.</p>
+        </div>
+        
+        <!-- Feature Card 3 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 group hover:border-primary hover:-translate-y-2 transform transition-all duration-300">
+          <div class="bg-primary rounded-full w-14 h-14 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300 transform transition-transform duration-500 group-hover:scale-110">
+            <i class="fas fa-tachometer-alt text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-darkNavy">Performance Tracking</h3>
+          <p class="text-gray">Track and optimize your application's performance to ensure fast loading times and smooth user experience.</p>
+        </div>
+        
+        <!-- Feature Card 4 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 group hover:border-primary hover:-translate-y-2 transform transition-all duration-300">
+          <div class="bg-primary rounded-full w-14 h-14 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300 transform transition-transform duration-500 group-hover:scale-110">
+            <i class="fas fa-users text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-darkNavy">User Behavior Analysis</h3>
+          <p class="text-gray">Understand how users interact with your application to improve user experience and engagement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Stats Section -->
+  <section class="py-12 bg-primary text-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <!-- Stat 1 -->
+        <div class="p-4 hover:bg-blue-600 transition-colors duration-300 rounded-lg hover:transform hover:scale-105 transition-transform duration-300">
+          <div class="flex items-center justify-center mb-3">
+            <i class="fas fa-users text-2xl mr-2"></i>
+            <span class="text-3xl font-bold">10,000+</span>
+          </div>
+          <p class="text-lg">Happy Clients</p>
+        </div>
+        
+        <!-- Stat 2 -->
+        <div class="p-4 hover:bg-blue-600 transition-colors duration-300 rounded-lg hover:transform hover:scale-105 transition-transform duration-300">
+          <div class="flex items-center justify-center mb-3">
+            <i class="fas fa-chart-pie text-2xl mr-2"></i>
+            <span class="text-3xl font-bold">85%</span>
+          </div>
+          <p class="text-lg">Success Rate</p>
+        </div>
+        
+        <!-- Stat 3 -->
+        <div class="p-4 hover:bg-blue-600 transition-colors duration-300 rounded-lg hover:transform hover:scale-105 transition-transform duration-300">
+          <div class="flex items-center justify-center mb-3">
+            <i class="fas fa-project-diagram text-2xl mr-2"></i>
+            <span class="text-3xl font-bold">500+</span>
+          </div>
+          <p class="text-lg">Projects Completed</p>
+        </div>
+        
+        <!-- Stat 4 -->
+        <div class="p-4 hover:bg-blue-600 transition-colors duration-300 rounded-lg hover:transform hover:scale-105 transition-transform duration-300">
+          <div class="flex items-center justify-center mb-3">
+            <i class="fas fa-star text-2xl mr-2"></i>
+            <span class="text-3xl font-bold">4.8</span>
+          </div>
+          <p class="text-lg">Average Rating</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Growth Section -->
+  <section class="py-16 md:py-24 bg-extraLightBlue">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <img src="assets/img/Group 8706.png" alt="Growth Analytics" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-darkNavy mb-6">Discover & growth <span class="text-primary">with analysis</span></h2>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+              <span>Real-time performance monitoring and alerts</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+              <span>Comprehensive security analysis and protection</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+              <span>User behavior tracking and optimization</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+              <span>Data-driven insights for continuous improvement</span>
+            </li>
+          </ul>
+          <a href="#contact" class="inline-block mt-8 bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition-colors duration-300 shadow-md font-medium">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Accordion Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-darkNavy mb-4">Why Choose <span class="text-primary">US</span></h2>
+        <p class="text-gray max-w-2xl mx-auto">Frequently asked questions about our services and how we can help your business grow.</p>
+      </div>
+      
+      <!-- Accordion Component -->
+      <div class="max-w-3xl mx-auto">
+        <!-- Accordion Item 1 -->
+        <div class="accordion-item border-b border-gray-200 py-4">
+          <button class="accordion-header flex justify-between items-center w-full text-left font-semibold text-lg text-darkNavy focus:outline-none">
+            <span>What services do you provide?</span>
+            <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content mt-2 text-gray hidden overflow-hidden transition-all duration-300">
+            <p class="pb-4">We provide comprehensive web application development services including design, development, testing, deployment, and maintenance. Our team specializes in creating custom solutions tailored to your business needs.</p>
+          </div>
+        </div>
+        
+        <!-- Accordion Item 2 -->
+        <div class="accordion-item border-b border-gray-200 py-4">
+          <button class="accordion-header flex justify-between items-center w-full text-left font-semibold text-lg text-darkNavy focus:outline-none">
+            <span>How long does it take to develop a web application?</span>
+            <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content mt-2 text-gray hidden overflow-hidden transition-all duration-300">
+            <p class="pb-4">The development timeline varies depending on the complexity of your project. Simple applications can take 4-8 weeks, while more complex solutions may require 3-6 months. We'll provide a detailed timeline during our initial consultation.</p>
+          </div>
+        </div>
+        
+        <!-- Accordion Item 3 -->
+        <div class="accordion-item border-b border-gray-200 py-4">
+          <button class="accordion-header flex justify-between items-center w-full text-left font-semibold text-lg text-darkNavy focus:outline-none">
+            <span>Do you provide ongoing support after launch?</span>
+            <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content mt-2 text-gray hidden overflow-hidden transition-all duration-300">
+            <p class="pb-4">Yes, we offer comprehensive maintenance and support packages to ensure your application runs smoothly after launch. Our support includes bug fixes, security updates, performance optimization, and feature enhancements.</p>
+          </div>
+        </div>
+        
+        <!-- Accordion Item 4 -->
+        <div class="accordion-item border-b border-gray-200 py-4">
+          <button class="accordion-header flex justify-between items-center w-full text-left font-semibold text-lg text-darkNavy focus:outline-none">
+            <span>How do you ensure the security of web applications?</span>
+            <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content mt-2 text-gray hidden overflow-hidden transition-all duration-300">
+            <p class="pb-4">We implement industry-standard security practices including secure coding, regular security audits, penetration testing, data encryption, and compliance with relevant regulations. Our security-first approach ensures your application and data remain protected.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Pricing Section -->
+  <section class="py-16 md:py-24 bg-extraLightBlue">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-darkNavy mb-4">We provide <span class="text-primary">awesome pricing</span> plans for application</h2>
+        <p class="text-gray max-w-2xl mx-auto">Choose the perfect plan that fits your business needs and budget.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Basic Plan -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+          <div class="p-8 text-center">
+            <h3 class="text-2xl font-bold text-darkNavy mb-2">Basic Plan</h3>
+            <p class="text-gray mb-6">For small businesses</p>
+            <div class="text-primary text-4xl font-bold mb-6">$49<span class="text-sm text-gray font-normal">/mo</span></div>
+            <ul class="text-left space-y-3 mb-8">
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>Basic web application</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>5 pages included</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>Basic analytics</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>Email support</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>1 month free updates</span>
+              </li>
+            </ul>
+            <a href="#contact" class="block w-full py-3 bg-white border border-primary text-primary rounded-lg hover:bg-extraLightBlue transition-colors duration-300 font-medium">Get Started</a>
+          </div>
+        </div>
+        
+        <!-- Standard Plan -->
+        <div class="bg-white rounded-xl shadow-xl overflow-hidden transform scale-105 relative z-10">
+          <div class="bg-primary text-white text-center py-2 text-sm font-medium">MOST POPULAR</div>
+          <div class="p-8 text-center">
+            <h3 class="text-2xl font-bold text-darkNavy mb-2">Standard Plan</h3>
+            <p class="text-gray mb-6">For growing businesses</p>
+            <div class="text-primary text-4xl font-bold mb-6">$99<span class="text-sm text-gray font-normal">/mo</span></div>
+            <ul class="text-left space-y-3 mb-8">
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>Advanced web application</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>10 pages included</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>Advanced analytics</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>Priority support</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>3 months free updates</span>
+              </li>
+            </ul>
+            <a href="#contact" class="block w-full py-3 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors duration-300 font-medium">Get Started</a>
+          </div>
+        </div>
+        
+        <!-- Premium Plan -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+          <div class="p-8 text-center">
+            <h3 class="text-2xl font-bold text-darkNavy mb-2">Premium Plan</h3>
+            <p class="text-gray mb-6">For enterprises</p>
+            <div class="text-primary text-4xl font-bold mb-6">$199<span class="text-sm text-gray font-normal">/mo</span></div>
+            <ul class="text-left space-y-3 mb-8">
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>Enterprise web application</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>Unlimited pages</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>Premium analytics</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>24/7 dedicated support</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span>Lifetime free updates</span>
+              </li>
+            </ul>
+            <a href="#contact" class="block w-full py-3 bg-white border border-primary text-primary rounded-lg hover:bg-extraLightBlue transition-colors duration-300 font-medium">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonials Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-darkNavy mb-4">What our customers are <span class="text-primary">saying about us?</span></h2>
+        <p class="text-gray max-w-2xl mx-auto">Hear from our satisfied clients about their experience working with us.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+          <div class="flex items-center mb-4">
+            <div class="text-primary">
+              <i class="fas fa-quote-left text-3xl"></i>
+            </div>
+          </div>
+          <p class="text-gray mb-6">"Working with Zeroon has been an incredible experience. Their team understood our requirements perfectly and delivered a web application that exceeded our expectations. The ongoing support has been exceptional."</p>
+          <div class="flex items-center">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-semibold text-darkNavy">John Smith</h4>
+              <p class="text-sm text-gray">CEO, TechCorp</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+          <div class="flex items-center mb-4">
+            <div class="text-primary">
+              <i class="fas fa-quote-left text-3xl"></i>
+            </div>
+          </div>
+          <p class="text-gray mb-6">"The analytics and monitoring tools provided by Zeroon have transformed how we understand our user behavior. We've been able to make data-driven decisions that have significantly improved our conversion rates."</p>
+          <div class="flex items-center">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-semibold text-darkNavy">Sarah Johnson</h4>
+              <p class="text-sm text-gray">Marketing Director, GrowthLabs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Form Section -->
+  <section id="contact" class="py-16 md:py-24 bg-extraLightBlue">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-darkNavy mb-4">Get in <span class="text-primary">Touch</span></h2>
+        <p class="text-gray max-w-2xl mx-auto">Have questions or ready to start your project? Contact us today!</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <!-- Contact Info -->
+          <div class="bg-primary text-white p-8 md:p-12">
+            <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-4 text-xl"></i>
+                <p>123 Business Avenue, Tech Park, San Francisco, CA 94107</p>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-phone-alt mt-1 mr-4 text-xl"></i>
+                <p>+1 (555) 123-4567</p>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-4 text-xl"></i>
+                <p>info@zeroon.com</p>
+              </div>
+            </div>
+            
+            <div class="mt-12">
+              <h4 class="text-xl font-semibold mb-4">Follow Us</h4>
+              <div class="flex space-x-4">
+                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contact Form -->
+          <div class="p-8 md:p-12">
+            <h3 class="text-2xl font-bold text-darkNavy mb-6">Send us a Message</h3>
+            <form id="contactForm" class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray mb-1">Full Name</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your name">
+                <p class="error-message text-red-500 text-sm mt-1 hidden">Please enter your name</p>
+              </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray mb-1">Email Address</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="your.email@example.com">
+                <p class="error-message text-red-500 text-sm mt-1 hidden">Please enter a valid email address</p>
+              </div>
+              
+              <div>
+                <label for="subject" class="block text-sm font-medium text-gray mb-1">Subject</label>
+                <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="How can we help you?">
+                <p class="error-message text-red-500 text-sm mt-1 hidden">Please enter a subject</p>
+              </div>
+              
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray mb-1">Message</label>
+                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your message here..."></textarea>
+                <p class="error-message text-red-500 text-sm mt-1 hidden">Please enter your message</p>
+              </div>
+              
+              <div>
+                <button type="submit" class="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors duration-300 font-medium">Send Message</button>
+              </div>
+              
+              <div id="form-success" class="text-green-500 hidden">Your message has been sent successfully!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- Footer Section -->
+  <footer class="bg-darkNavy text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div>
+          <a href="#" class="text-2xl font-bold mb-6 inline-block">
+            <span class="text-white">Zer</span><span class="text-primary">oon</span>
+          </a>
+          <p class="text-gray-300 mb-6">We provide innovative web application solutions to help businesses grow and succeed in the digital world.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Services -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Services</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">Web Development</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">Mobile Apps</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">UI/UX Design</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">Cloud Services</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">Consulting</a></li>
+          </ul>
+        </div>
+        
+        <!-- Important Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Important Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">About Us</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">Our Team</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">Case Studies</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">Blog</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-primary transition-colors duration-300">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
+          <p class="text-gray-300 mb-4">Subscribe to our newsletter to receive updates and news.</p>
+          <form class="flex">
+            <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-darkNavy">
+            <button type="submit" class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-blue-600 transition-colors duration-300">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
+        <p>&copy; 2023 Zeroon. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        
+        // Change icon based on menu state
+        const icon = mobileMenuButton.querySelector('i');
+        if (isOpen) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+      
+      // Accordion Functionality
+      const accordionHeaders = document.querySelectorAll('.accordion-header');
+      
+      accordionHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+          const accordionItem = this.parentElement;
+          const content = this.nextElementSibling;
+          const icon = this.querySelector('i');
+          
+          // Toggle current item
+          content.classList.toggle('hidden');
+          icon.classList.toggle('fa-plus');
+          icon.classList.toggle('fa-minus');
+          icon.classList.toggle('rotate-45');
+          
+          // Adjust height for animation
+          if (!content.classList.contains('hidden')) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+          } else {
+            content.style.maxHeight = '0';
+          }
+        });
+      });
+      
+      // Form Validation
+      const contactForm = document.getElementById('contactForm');
+      
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          let isValid = true;
+          const formSuccess = document.getElementById('form-success');
+          
+          // Validate Name
+          const nameInput = document.getElementById('name');
+          const nameError = nameInput.nextElementSibling;
+          
+          if (!nameInput.value.trim()) {
+            nameError.classList.remove('hidden');
+            isValid = false;
+          } else {
+            nameError.classList.add('hidden');
+          }
+          
+          // Validate Email
+          const emailInput = document.getElementById('email');
+          const emailError = emailInput.nextElementSibling;
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          
+          if (!emailPattern.test(emailInput.value.trim())) {
+            emailError.classList.remove('hidden');
+            isValid = false;
+          } else {
+            emailError.classList.add('hidden');
+          }
+          
+          // Validate Subject
+          const subjectInput = document.getElementById('subject');
+          const subjectError = subjectInput.nextElementSibling;
+          
+          if (!subjectInput.value.trim()) {
+            subjectError.classList.remove('hidden');
+            isValid = false;
+          } else {
+            subjectError.classList.add('hidden');
+          }
+          
+          // Validate Message
+          const messageInput = document.getElementById('message');
+          const messageError = messageInput.nextElementSibling;
+          
+          if (!messageInput.value.trim()) {
+            messageError.classList.remove('hidden');
+            isValid = false;
+          } else {
+            messageError.classList.add('hidden');
+          }
+          
+          // If form is valid, show success message
+          if (isValid) {
+            contactForm.reset();
+            formSuccess.classList.remove('hidden');
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+              formSuccess.classList.add('hidden');
+            }, 5000);
+          }
+        });
+      }
+      
+      // Add scroll animations
+      const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        
+        elements.forEach(element => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementPosition < windowHeight - 100) {
+            element.classList.add('fade-in-up');
+          }
+        });
+      };
+      
+      // Add animation class to elements
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        const headings = section.querySelectorAll('h2, h3');
+        const paragraphs = section.querySelectorAll('p:not(.error-message)');
+        const cards = section.querySelectorAll('.card, .feature-card, .accordion-item');
+        
+        headings.forEach(el => el.classList.add('animate-on-scroll'));
+        paragraphs.forEach(el => el.classList.add('animate-on-scroll'));
+        cards.forEach(el => el.classList.add('animate-on-scroll'));
+      });
+      
+      // Run on load and scroll
+      window.addEventListener('scroll', animateOnScroll);
+      window.addEventListener('load', animateOnScroll);
+    });
+  </script>
+</body>
+
+</html>
